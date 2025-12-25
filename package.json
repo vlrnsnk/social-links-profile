@@ -6,12 +6,12 @@
   "description": "Solution to the 'Social Links Profile' challenge on Frontend Mentor",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist",
     "stylelint": "stylelint \"src/scss/**/*.scss\"",
-    "lint": "npm run editorconfig && npm run stylelint",
-    "editorconfig": "editorconfig-cli"
+    "editorconfig": "npx editorconfig-cli",
+    "lint": "npm run editorconfig && npm run stylelint"
   },
   "repository": {
     "type": "git",
@@ -44,6 +44,7 @@
   ],
   "devDependencies": {
     "autoprefixer": "^10.4.23",
+    "editorconfig-cli": "^1.0.0",
     "gh-pages": "^6.3.0",
     "postcss": "^8.5.6",
     "sass": "^1.97.1",

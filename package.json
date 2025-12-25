@@ -3,11 +3,45 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "description": "Solution to the 'Social Links Profile' challenge on Frontend Mentor",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist",
+    "stylelint": "stylelint \"src/scss/**/*.scss\"",
+    "lint": "npm run editorconfig && npm run stylelint",
+    "editorconfig": "editorconfig-cli"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vlrnsnk/social-links-profile.git"
+  },
+  "keywords": [
+    "frontendmentor",
+    "vite",
+    "sass",
+    "frontend"
+  ],
+  "author": "Valeriy Anysenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vlrnsnk/social-links-profile/issues"
+  },
+  "homepage": "https://vlrnsnk.github.io/social-links-profile",
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "> 0.2%",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "src/*.html",
+    "src/sass/**/*.scss"
+  ],
   "devDependencies": {
     "typescript": "~5.9.3",
     "vite": "^7.2.4"

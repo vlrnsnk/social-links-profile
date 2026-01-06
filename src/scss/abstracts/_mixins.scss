@@ -1,2 +1,21 @@
 /* Text presets */
 @use '../base/typography' as *;
+
+@mixin text-preset($size, $weight) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-1() {
+  @include text-preset(1.5rem, 700);
+}
+
+@mixin text-preset-2() {
+  @include text-preset(0.875rem, 400);
+}
+
+@mixin text-preset-3() {
+  @include text-preset(0.875rem, 700);
+}

@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Social Links Profile</title>
+  <meta name="description" content="Social Links Profile">
   <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/images/favicons/favicon.svg" />
   <link rel="shortcut icon" href="/favicon.ico" />
@@ -12,18 +13,44 @@
   <link rel="manifest" href="/images/favicons/site.webmanifest" />
   <link rel="stylesheet" href="/src/scss/main.scss">
 </head>
-<body>
-  <img src="/src/assets/images/avatar-jessica.jpeg" alt="Jessica Randall's Avatar" class="avatar">
+  <body>
+    <main class="main">
+      <h1 class="visually-hidden">Social Links Profile</h1>
 
-  Jessica Randall
-  London, United Kingdom
-  "Front-end developer and avid reader."
+      <article class="profile">
+        <header class="profile__header">
+          <figure class="profile__figure">
+            <img
+              class="profile__avatar"
+              src="/src/assets/images/avatar-jessica.jpeg"
+              alt="Jessica Randall's Avatar"
+            />
+          </figure>
 
-  GitHub
-  Frontend Mentor
-  LinkedIn
-  Twitter
-  Instagram
+          <h2 class="profile__name">Jessica Randall</h2>
+          <p class="profile__location">London, United Kingdom</p>
+          <p class="profile__description">"Front-end developer and avid reader."</p>
+        </header>
 
-</body>
+        <ul class="profile__list">
+          <li class="profile__item">
+            <a class="profile__link" href="#">GitHub</a>
+          </li>
+          <li class="profile__item">
+            <a class="profile__link" href="#">Frontend Mentor</a>
+          </li>
+          <li class="profile__item">
+            <a class="profile__link" href="#">LinkedIn</a>
+          </li>
+          <li class="profile__item">
+            <a class="profile__link" href="#">Twitter</a>
+          </li>
+          <li class="profile__item">
+            <a class="profile__link" href="#">Instagram</a>
+          </li>
+        </ul>
+      </article>
+
+    </main>
+  </body>
 </html>

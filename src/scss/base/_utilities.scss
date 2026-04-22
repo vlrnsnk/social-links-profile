@@ -9,3 +9,13 @@
   clip-path: inset(100%);
   overflow: hidden;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: none !important;
+  }
+}

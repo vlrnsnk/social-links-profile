@@ -16,6 +16,10 @@
   @include text-preset(0.875rem, 400);
 }
 
-@mixin text-preset-3() {
+@mixin text-preset-2-bold() {
   @include text-preset(0.875rem, 700);
+}
+
+@mixin transition($properties...) {
+  transition: $properties 0.2s ease-in-out;
 }

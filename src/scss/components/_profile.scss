@@ -1,0 +1,84 @@
+@use "../abstracts" as abstracts;
+
+.profile {
+  background-color: abstracts.$color-grey-800;
+  border-radius: 0.75rem;
+  max-width: 24rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  gap: 1.5rem;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  // &__figure {}
+
+  &__avatar {
+    border-radius: 50%;
+    width: 5.5rem;
+    height: 5.5rem;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__name {
+    margin-bottom: .25rem;
+    color: abstracts.$color-white;
+
+    @include abstracts.text-preset-1();
+  }
+
+  &__location {
+    color: abstracts.$color-green;
+
+    @include abstracts.text-preset-2-bold();
+  }
+
+  &__description {
+    color: abstracts.$color-white;
+
+    @include abstracts.text-preset-2();
+  }
+
+  &__list {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+  }
+
+  &__link {
+    text-decoration: none;
+    background-color: abstracts.$color-grey-700;
+    color: abstracts.$color-white;
+    padding: 0.75rem 0;
+    text-align: center;
+    width: 100%;
+    display: block;
+    border-radius: 0.5rem;
+
+    @include abstracts.transition(background-color, color);
+
+    &:hover,
+    &:focus-visible {
+      background-color: abstracts.$color-green;
+      color: abstracts.$color-grey-700;
+    }
+
+    &:focus-visible {
+      outline: 0.125rem solid abstracts.$color-green;
+      outline-offset: 0.125rem;
+    }
+
+    &:active {
+      transform: scale(0.98);
+      background-color: color-mix(in hsl, abstracts.$color-green, black 10%);
+    }
+  }
+}

@@ -1,14 +1,14 @@
 @use "../abstracts" as abstracts;
 
 .profile {
-  background-color: abstracts.$color-grey-800;
-  border-radius: 0.75rem;
+  display: flex;
   width: 100%;
   max-width: 24rem;
-  display: flex;
-  flex-direction: column;
   padding: 1.5rem;
+  flex-direction: column;
   gap: 1.5rem;
+  background-color: abstracts.$color-grey-800;
+  border-radius: 0.75rem;
 
   &__header {
     display: flex;
@@ -18,11 +18,11 @@
   }
 
   &__avatar {
-    border-radius: 50%;
+    display: block;
     width: 5.5rem;
     height: 5.5rem;
+    border-radius: 50%;
     object-fit: cover;
-    display: block;
   }
 
   &__name {
@@ -39,29 +39,29 @@
   }
 
   &__description {
-    color: abstracts.$color-white;
     text-align: center;
+    color: abstracts.$color-white;
 
     @include abstracts.text-preset-2;
   }
 
   &__list {
     display: flex;
-    gap: 1rem;
-    flex-direction: column;
-    list-style: none;
     padding: 0;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
   }
 
   &__link {
-    text-decoration: none;
-    background-color: abstracts.$color-grey-700;
-    color: abstracts.$color-white;
-    padding: 0.75rem 0;
-    text-align: center;
-    width: 100%;
     display: block;
+    width: 100%;
+    padding: 0.75rem 0;
+    background-color: abstracts.$color-grey-700;
     border-radius: 0.5rem;
+    text-align: center;
+    color: abstracts.$color-white;
+    text-decoration: none;
 
     @include abstracts.transition(background-color, color);
 
@@ -77,8 +77,8 @@
     }
 
     &:active {
-      transform: scale(0.98);
       background-color: color-mix(in hsl, abstracts.$color-green, black 10%);
+      transform: scale(0.98);
     }
   }
 }

@@ -11,7 +11,9 @@
     "deploy": "gh-pages -d dist",
     "stylelint": "stylelint \"src/scss/**/*.scss\"",
     "editorconfig": "npx editorconfig-cli",
-    "lint": "npm run editorconfig && npm run stylelint"
+    "lint": "npm run editorconfig && stylelint \"src/scss/**/*.scss\"",
+    "lint:fix": "stylelint \"src/scss/**/*.scss\" --fix",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -42,10 +44,20 @@
     "src/*.html",
     "src/sass/**/*.scss"
   ],
+  "lint-staged": {
+    "src/scss/**/*.scss": [
+      "stylelint --fix"
+    ],
+    "*.{js,json,html}": [
+      "npx editorconfig-cli"
+    ]
+  },
   "devDependencies": {
     "autoprefixer": "^10.4.23",
     "editorconfig-cli": "^1.0.0",
     "gh-pages": "^6.3.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
     "postcss": "^8.5.6",
     "sass": "^1.97.1",
     "stylelint": "^16.26.1",

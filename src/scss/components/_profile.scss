@@ -60,8 +60,8 @@
     background-color: abstracts.$color-grey-700;
     border-radius: 0.5rem;
     text-align: center;
-    color: abstracts.$color-white;
     text-decoration: none;
+    color: abstracts.$color-white;
 
     @include abstracts.transition(background-color, color);
 

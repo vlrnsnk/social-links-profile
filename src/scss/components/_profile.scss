@@ -30,19 +30,19 @@
     margin-bottom: .25rem;
     color: abstracts.$color-white;
 
-    @include abstracts.text-preset-1();
+    @include abstracts.text-preset-1;
   }
 
   &__location {
     color: abstracts.$color-green;
 
-    @include abstracts.text-preset-2-bold();
+    @include abstracts.text-preset-2-bold;
   }
 
   &__description {
     color: abstracts.$color-white;
 
-    @include abstracts.text-preset-2();
+    @include abstracts.text-preset-2;
   }
 
   &__list {

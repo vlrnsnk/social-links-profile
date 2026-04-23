@@ -3,6 +3,7 @@
 .profile {
   background-color: abstracts.$color-grey-800;
   border-radius: 0.75rem;
+  width: 100%;
   max-width: 24rem;
   display: flex;
   flex-direction: column;
@@ -15,8 +16,6 @@
     align-items: center;
     gap: 1.5rem;
   }
-
-  // &__figure {}
 
   &__avatar {
     border-radius: 50%;
@@ -41,6 +40,7 @@
 
   &__description {
     color: abstracts.$color-white;
+    text-align: center;
 
     @include abstracts.text-preset-2;
   }

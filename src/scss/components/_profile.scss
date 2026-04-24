@@ -64,7 +64,7 @@
     color: abstracts.$color-white;
 
     @include abstracts.text-preset-2-bold;
-    @include abstracts.transition(background-color, color);
+    @include abstracts.transition(background-color, color, transform);
 
     &:hover,
     &:focus-visible {

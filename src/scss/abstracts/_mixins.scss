@@ -22,7 +22,7 @@
 }
 
 @mixin transition($properties...) {
-  $transitions: () !default;
+  $transitions: ();
 
   @each $prop in $properties {
     $transitions: list.append($transitions, $prop 0.2s ease-in-out, comma);

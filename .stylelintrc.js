@@ -1,5 +1,6 @@
 export default {
   extends: [
+    "stylelint-config-standard",
     "stylelint-config-standard-scss"
   ],
   plugins: [
@@ -156,7 +157,7 @@ export default {
       {
         severity: "warning"
       }
-    ]
+    ],
   },
   ignoreFiles: ['src/scss/vendors/_normalize.scss'],
 };

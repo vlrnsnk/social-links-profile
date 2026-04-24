@@ -63,6 +63,7 @@
     text-decoration: none;
     color: abstracts.$color-white;
 
+    @include abstracts.text-preset-2-bold;
     @include abstracts.transition(background-color, color);
 
     &:hover,
@@ -80,5 +81,9 @@
       background-color: color-mix(in hsl, abstracts.$color-green, black 10%);
       transform: scale(0.98);
     }
+  }
+
+  @media screen and (width >= 768px) {
+    padding: abstracts.$spacing-500;
   }
 }

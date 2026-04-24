@@ -1,5 +1,6 @@
 /* Text presets */
 @use '../base/typography' as *;
+@use 'sass:list';
 
 @mixin text-preset($size, $weight) {
   font-size: $size;
@@ -21,5 +22,11 @@
 }
 
 @mixin transition($properties...) {
-  transition: $properties 0.2s ease-in-out;
+  $transitions: ();
+
+  @each $prop in $properties {
+    $transitions: list.append($transitions, $prop 0.2s ease-in-out, comma);
+  }
+
+  transition: $transitions;
 }

@@ -8,8 +8,8 @@ $inter-fonts: (
 @each $weight, $file in $inter-fonts {
   @font-face {
     font-family: Inter;
-    font-style: normal;
     font-weight: $weight;
+    font-style: normal;
     src: url('../../assets/fonts/#{$file}.woff2') format('woff2');
     font-display: swap;
   }

@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Preview
 
-![](./preview.jpg)
+![](./preview.png)
 
 ### Links
 

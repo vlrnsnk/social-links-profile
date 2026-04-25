@@ -12,6 +12,8 @@
     "editorconfig": "npx editorconfig-cli",
     "lint": "npm run editorconfig && stylelint \"src/scss/**/*.scss\"",
     "lint:fix": "stylelint \"src/scss/**/*.scss\" --fix",
+    "lint:html": "html-validate \"*.html\"",
+    "lint:html:fix": "html-validate --fix \"*.html\"",
     "prepare": "husky"
   },
   "repository": {
@@ -44,16 +46,14 @@
     "src/sass/**/*.scss"
   ],
   "lint-staged": {
-    "src/scss/**/*.scss": [
-      "stylelint --fix"
-    ],
-    "*.{js,json,html}": [
-      "npx editorconfig-cli"
-    ]
+    "src/scss/**/*.scss": "stylelint --fix",
+    "*.{js,json}": "npx editorconfig-cli",
+    "*.html": "html-validate"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.23",
     "editorconfig-cli": "^1.0.0",
+    "html-validate": "^10.13.1",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
     "postcss": "^8.5.6",
